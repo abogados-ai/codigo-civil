@@ -107,7 +107,7 @@ const plural = (n, s, p) => n + ' ' + (n === 1 ? s : p);
 
 const flat = () => LIBROS.length === 1;
 function vIndice() {
-  frame(CODE.name, 'indice');
+  frame(CODE.name, 'indice', '#/codigos');
   const rec = recent.map(n => BYNUM.get(n)).filter(Boolean);
   view.innerHTML = `<button class="btn primary" id="jmp" style="width:100%;margin-bottom:4px">Ir a un artículo…</button>` +
     (rec.length ? `<h2 class="sec">Seguir leyendo</h2><div class="list">${rec.slice(0, 5).map(a => artRow(a)).join('')}</div>` : '') +
@@ -260,7 +260,7 @@ function vArt(n) {
 
 let lastQ = '';
 function vBuscar(q = lastQ) {
-  frame('Buscar', 'buscar');
+  frame('Buscar', 'buscar', '#/');
   view.innerHTML = `<div class="search"><input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false"
     placeholder="N° de artículo o palabras (ej: 254, plazo prescripción)" value="${esc(q)}"></div><div id="res"></div>`;
   const input = $('#q'); let timer;
@@ -315,7 +315,7 @@ function highlight(a, terms) {
 }
 
 function vGuardados() {
-  frame('Guardados', 'guardados');
+  frame('Guardados', 'guardados', '#/');
   const nums = [...new Set([...Object.keys(favs), ...Object.keys(notes)])].filter(n => BYNUM.has(n))
     .sort((x, y) => BYNUM.get(x).i - BYNUM.get(y).i);
   let html = '';
@@ -349,7 +349,7 @@ function vGuardados() {
 
 // ---------- selector de códigos ----------
 function vCodigos() {
-  frame('Códigos', 'codigos');
+  frame('Códigos', 'codigos', CODE ? '#/' : null);
   document.documentElement.classList.add('pick');
   view.innerHTML = `<h2 class="sec">Elige un código</h2><div class="list">` + CODES.map(c =>
     `<a class="row code" data-code="${c.id}" href="#/codigo/${c.id}"><span class="badge">${esc(c.short)}</span>
