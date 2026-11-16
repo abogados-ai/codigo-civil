@@ -118,3 +118,33 @@ article.art.from-l{animation:inL .22s ease-out}
   .noside #side{display:none}
   .noside main{margin-left:0}
 }
+
+/* color por código */
+:root[data-code="civil"]{--accent:#8a1c2b}
+@media (prefers-color-scheme:dark){:root[data-code="civil"]:not([data-theme="light"]){--accent:#e0788a}}
+:root[data-code="civil"][data-theme="dark"]{--accent:#e0788a}
+.row.code[data-code="civil"] .badge{background:#8a1c2b}
+:root[data-code="cpc"]{--accent:#1d3f72}
+@media (prefers-color-scheme:dark){:root[data-code="cpc"]:not([data-theme="light"]){--accent:#8fb4ee}}
+:root[data-code="cpc"][data-theme="dark"]{--accent:#8fb4ee}
+.row.code[data-code="cpc"] .badge{background:#1d3f72}
+:root[data-code="cot"]{--accent:#0f6b73}
+@media (prefers-color-scheme:dark){:root[data-code="cot"]:not([data-theme="light"]){--accent:#7dcfd6}}
+:root[data-code="cot"][data-theme="dark"]{--accent:#7dcfd6}
+.row.code[data-code="cot"] .badge{background:#0f6b73}
+:root[data-code="penal"]{--accent:#5a2a82}
+@media (prefers-color-scheme:dark){:root[data-code="penal"]:not([data-theme="light"]){--accent:#c4a3ee}}
+:root[data-code="penal"][data-theme="dark"]{--accent:#c4a3ee}
+.row.code[data-code="penal"] .badge{background:#5a2a82}
+:root[data-code="cpp"]{--accent:#a35a12}
+@media (prefers-color-scheme:dark){:root[data-code="cpp"]:not([data-theme="light"]){--accent:#f0b070}}
+:root[data-code="cpp"][data-theme="dark"]{--accent:#f0b070}
+.row.code[data-code="cpp"] .badge{background:#a35a12}
+:root[data-code="trabajo"]{--accent:#1e6b45}
+@media (prefers-color-scheme:dark){:root[data-code="trabajo"]:not([data-theme="light"]){--accent:#7fd1a0}}
+:root[data-code="trabajo"][data-theme="dark"]{--accent:#7fd1a0}
+.row.code[data-code="trabajo"] .badge{background:#1e6b45}
+.row.code .badge{min-width:52px;height:40px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:12px;padding:0 8px}
+.pick #side{display:none!important}
+@media (min-width:1000px){.pick main{margin-left:0}}
+#side .arts a.cur{color:var(--accent-ink)}

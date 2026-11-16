@@ -1,5 +1,5 @@
-const CACHE = 'cc-v7';
-const FILES = ['./', 'index.html', 'style.css', 'app.js', 'codigo.json', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
+const CACHE = 'lex-v1';
+const FILES = ['./', 'index.html', 'style.css', 'app.js', 'codes/civil.json', 'codes/cpc.json', 'codes/cot.json', 'codes/penal.json', 'codes/cpp.json', 'codes/trabajo.json', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));
