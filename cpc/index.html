@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CPC">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<title>CPC</title>
+</head>
+<body>
+<header id="top">
+  <button id="back" aria-label="Volver" hidden>‹</button>
+  <button id="sb" aria-label="Mostrar u ocultar índice" title="Índice"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="14" rx="3"/><path d="M9.5 5v14"/></svg></button>
+  <h1 id="title">CPC</h1>
+  <button id="aa" aria-label="Tamaño de letra">Aa</button>
+</header>
+<aside id="side" aria-label="Índice del Código"></aside>
+<main id="view" tabindex="-1"></main>
+<nav id="tabs">
+  <a href="#/" data-tab="indice"><span>☰</span>Índice</a>
+  <a href="#/buscar" data-tab="buscar"><span>⌕</span>Buscar</a>
+  <a href="#/guardados" data-tab="guardados"><span>★</span>Guardados</a>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>
