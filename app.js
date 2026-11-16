@@ -24,11 +24,13 @@ const saveFavs = () => store.set(ck('favs'), favs);
 const saveNotes = () => store.set(ck('notes'), notes);
 
 function applyPrefs() {
-  document.documentElement.style.setProperty('--fs', fontSize + 'px');
+  const k = innerWidth >= 1800 ? 1.25 : innerWidth >= 1400 ? 1.12 : 1;
+  document.documentElement.style.setProperty('--fs', Math.round(fontSize * k) + 'px');
   if (theme === 'auto') document.documentElement.removeAttribute('data-theme');
   else document.documentElement.setAttribute('data-theme', theme);
 }
 applyPrefs();
+addEventListener('resize', applyPrefs);
 
 function toast(msg) {
   let t = $('.toast');

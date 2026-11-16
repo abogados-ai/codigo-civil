@@ -159,6 +159,12 @@ article.art.from-l{animation:inL .22s ease-out}
   #side summary:hover{color:var(--accent)}
   .btn,#aa,#sb,a.ref,.row{cursor:pointer}
 }
-@media (min-width:1400px){html{zoom:1.15}}
-@media (min-width:1800px){html{zoom:1.3}}
-@media (min-width:2300px){html{zoom:1.6}}
+@media (min-width:1400px){
+  main>*{max-width:860px}
+  .art h2{font-size:30px}
+  .row .t{font-size:17px}.row .s{font-size:14px}
+  #side{width:380px}main{margin-left:380px}nav#tabs{width:380px}
+  html:not(.noside):not(.pick) header h1{padding-left:328px}
+  #side .arts a{font-size:14px}
+}
+@media (min-width:1800px){main>*{max-width:980px}.art h2{font-size:34px}}
