@@ -16,6 +16,7 @@ header#top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-ite
 header h1{flex:1;margin:0;font-size:17px;font-weight:650;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 header button{min-width:44px;height:36px;border:0;background:none;color:var(--accent);font-size:20px;font-weight:600}
 header button[hidden]{display:block;visibility:hidden}
+header button svg{display:block;margin:auto}
 #aa{font-size:16px}
 main{padding:calc(var(--safe-t) + 60px) 16px calc(var(--safe-b) + 84px);max-width:720px;margin:0 auto;outline:none}
 nav#tabs{position:fixed;bottom:0;left:0;right:0;z-index:10;display:flex;padding:6px 0 calc(var(--safe-b) + 4px);
@@ -94,7 +95,6 @@ article.art.from-l{animation:inL .22s ease-out}
     overflow:auto;-webkit-overflow-scrolling:touch;padding:10px 12px 20px;border-right:1px solid var(--line);background:var(--bg)}
   main{margin-left:350px;max-width:none;padding-left:44px;padding-right:44px}
   main>*{max-width:780px;margin-left:auto;margin-right:auto}
-  #back{visibility:hidden}
   #side details{margin:0}
   #side>details>summary{font-weight:700;font-size:15px;padding:10px 6px;border-bottom:1px solid var(--line)}
   #side details.tt{margin-left:8px}
@@ -114,7 +114,6 @@ article.art.from-l{animation:inL .22s ease-out}
 #sb{display:none}
 @media (min-width:1000px){
   #sb{display:block}
-  #back{display:none!important}
   .noside #side{display:none}
   .noside main{margin-left:0}
 }
@@ -153,7 +152,7 @@ article.art.from-l{animation:inL .22s ease-out}
 @media (min-width:1000px){
   nav#tabs{right:auto;width:350px;border-right:1px solid var(--line)}
   .noside nav#tabs,.pick nav#tabs{left:50%;right:auto;width:520px;transform:translateX(-50%);border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0}
-  html:not(.noside):not(.pick) header h1{padding-left:298px}
+  html:not(.noside):not(.pick) header h1{padding-left:246px}
   #side .arts a{cursor:pointer}
   #side .arts a:hover,.row:hover,.pager a:hover{background:color-mix(in srgb,var(--accent) 10%,var(--card))}
   #side summary:hover{color:var(--accent)}
@@ -164,7 +163,7 @@ article.art.from-l{animation:inL .22s ease-out}
   .art h2{font-size:30px}
   .row .t{font-size:17px}.row .s{font-size:14px}
   #side{width:380px}main{margin-left:380px}nav#tabs{width:380px}
-  html:not(.noside):not(.pick) header h1{padding-left:328px}
+  html:not(.noside):not(.pick) header h1{padding-left:276px}
   #side .arts a{font-size:14px}
 }
 @media (min-width:1800px){main>*{max-width:980px}.art h2{font-size:34px}}
