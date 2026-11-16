@@ -168,3 +168,12 @@ article.art.from-l{animation:inL .22s ease-out}
   #side .arts a{font-size:14px}
 }
 @media (min-width:1800px){main>*{max-width:980px}.art h2{font-size:34px}}
+
+/* centrado uniforme del contenido en pantallas anchas */
+@media (min-width:1000px){
+  main>*{margin-left:auto!important;margin-right:auto!important;width:100%}
+  main>button.btn{display:block}
+  main>h2.sec{padding-left:4px}
+  .noside main>*{max-width:860px}
+}
+@media (min-width:1800px){.noside main>*{max-width:980px}}
